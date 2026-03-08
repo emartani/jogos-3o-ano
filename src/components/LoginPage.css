@@ -1,0 +1,121 @@
+/* src/components/LoginPage.css */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    background: linear-gradient(135deg, #a7e9ff, #ffafc0); /* Fundo colorido e divertido */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte amigável para crianças */
+    padding: 20px;
+}
+
+.login-container form {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    padding: 40px 30px;
+    border-radius: 25px; /* Bordas mais arredondadas */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Largura máxima */
+    box-sizing: border-box; /* Garante padding incluso na largura */
+    animation: fadeIn 0.8s ease-out; /* Animação de entrada */
+}
+
+/* Títulos */
+.login-main-title {
+    color: #ff6f91; /* Rosa vibrante */
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #ffe0b2; /* Sombra de texto divertida */
+}
+
+.login-subtitle {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Grupos de Formulário */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.input-label {
+    display: block;
+    color: #00bcd4; /* Azul água */
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-description {
+    color: #888;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+/* Inputs */
+.login-input {
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #b2ebf2; /* Borda azul clara */
+    border-radius: 12px;
+    font-size: 1.1em;
+    color: #333;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Importante para o padding */
+    background-color: #ffffff !important; /* Força o fundo branco */
+    color: #333333 !important; /* Define a cor do texto como cinza escuro */
+}
+
+.login-input::placeholder {
+    color: #ccc;
+    font-style: italic;
+}
+
+.login-input:focus {
+    border-color: #00bcd4; /* Borda mais escura ao focar */
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.3); /* Sombra azul ao focar */
+    outline: none; /* Remove o outline padrão do navegador */
+}
+
+/* Botão de Entrar */
+.login-button {
+    background-color: #ffccbc; /* Pêssego claro */
+    color: #e91e63; /* Pink */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px #ff9a8d; /* Efeito 3D */
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: #ff9a8d; /* Mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px #ff7043;
+}
+
+.login-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #ff7043;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
