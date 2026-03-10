@@ -1,0 +1,160 @@
+/* src/components/HomePage.css */
+
+.homepage-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fce4ec;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    text-transform: uppercase;
+}
+
+/* Títulos */
+.welcome-title {
+    color: #ff6f91; /* Rosa vibrante */
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: bounce 1s infinite alternate;
+}
+
+.series-title {
+    color: #00bcd4; /* Azul água */
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #ff9a8d; /* Linha divisória colorida */
+    padding-bottom: 10px;
+}
+
+/* Nível 2: Tabs de Matérias */
+.subject-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.subject-tab {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ffccbc; /* Pêssego claro */
+    color: #e91e63; /* Pink */
+    box-shadow: 0 4px #ff9a8d; /* Sombra para efeito 3D */
+}
+
+.subject-tab:hover {
+    background-color: #ff9a8d; /* Cor de hover mais escura */
+    transform: translateY(-2px);
+}
+
+.subject-tab.active {
+    background-color: #00bcd4; /* Azul ativo */
+    color: white;
+    box-shadow: 0 4px #0097a7;
+    transform: translateY(0);
+}
+
+/* Nível 3: Lista de Jogos */
+.game-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.game-card {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove sublinhado do link */
+    width: 380px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 3px solid transparent;
+}
+
+.game-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 111, 145, 0.4); /* Sombra rosa para destacar */
+    border-color: #ff6f91;
+}
+
+/* Espaço da Imagem/Ícone */
+.game-image-box {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 10px;
+    background-color: #4db6ac; /* Verde água */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-placeholder {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+}
+
+/* Info do Jogo */
+.game-info {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.game-name {
+    margin: 0;
+    color: #e91e63; /* Pink */
+    font-size: 1.5em;
+}
+
+.game-description {
+    margin: 5px 0 0 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Animação para o título */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+/* src/components/HomePage.css - Adicione isso */
+.level-title {
+    color: #00bcd4; 
+    font-size: 1.4em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px dashed #ff9a8d; /* Linha pontilhada para separar níveis */
+}
+
+@media (max-width: 480px) {
+  .homepage-container {
+    padding: 10px;
+  }
+
+  .game-card {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .game-image-box {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

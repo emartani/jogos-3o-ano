@@ -6,7 +6,8 @@
     align-items: center;
     min-height: 100vh; /* Ocupa a altura total da tela */
     background: linear-gradient(135deg, #a7e9ff, #ffafc0); /* Fundo colorido e divertido */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte amigável para crianças */
+    font-family: 'Luckiest Guy', cursive; /* tipografia solicitada */
+    text-transform: uppercase; /* tudo em maiúsculas conforme pedido */
     padding: 20px;
 }
 

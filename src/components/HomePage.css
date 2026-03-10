@@ -1,141 +1,242 @@
-/* src/components/HomePage.css */
-
-.homepage-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fce4ec; /* Rosa claro divertido */
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte amigável */
+/* ===== Reset e base responsiva ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* Títulos */
+html {
+  /* Evita zoom inesperado e melhora o cálculo de largura */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* rede de segurança contra qualquer overflow horizontal */
+  background: #fff;
+  color: #111;
+  font-family: 'Luckiest Guy', cursive; /* tipografia solicitada */
+  text-transform: uppercase; /* tudo em maiúsculas conforme pedido */
+}
+
+/* ===== Container principal ===== */
+/* src/components/HomePage.css */
+.homepage-container {
+  max-width: 900px;           /* permanece, pois é responsivo no desktop */
+  width: 100%;                /* garante que nunca ultrapasse a tela */
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fce4ec;  /* Rosa claro divertido */
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* ===== Títulos ===== */
 .welcome-title {
-    color: #ff6f91; /* Rosa vibrante */
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    animation: bounce 1s infinite alternate;
+  color: #ff6f91;             /* Rosa vibrante */
+  font-size: 2.2rem;          /* usa rem para responder ao viewport */
+  margin-bottom: 15px;
+  animation: bounce 1s infinite alternate;
+  word-wrap: break-word;
 }
 
 .series-title {
-    color: #00bcd4; /* Azul água */
-    font-size: 1.8em;
-    margin-bottom: 25px;
-    border-bottom: 3px solid #ff9a8d; /* Linha divisória colorida */
-    padding-bottom: 10px;
+  color: #00bcd4;             /* Azul água */
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #ff9a8d; /* Linha divisória colorida */
+  padding-bottom: 10px;
 }
 
-/* Nível 2: Tabs de Matérias */
+/* ===== Nível 2: Tabs de Matérias ===== */
 .subject-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;            /* permite quebrar para a próxima linha no mobile */
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding: 0 8px;
 }
 
 .subject-tab {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #ffccbc; /* Pêssego claro */
-    color: #e91e63; /* Pink */
-    box-shadow: 0 4px #ff9a8d; /* Sombra para efeito 3D */
+  padding: 10px 18px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #ffccbc;  /* Pêssego claro */
+  color: #e91e63;             /* Pink */
+  box-shadow: 0 4px #ff9a8d;  /* Sombra para efeito 3D */
+  white-space: nowrap;        /* evita quebra feia dentro do botão */
 }
 
 .subject-tab:hover {
-    background-color: #ff9a8d; /* Cor de hover mais escura */
-    transform: translateY(-2px);
+  background-color: #ff9a8d;  /* Cor de hover mais escura */
+  transform: translateY(-2px);
 }
 
 .subject-tab.active {
-    background-color: #00bcd4; /* Azul ativo */
-    color: white;
-    box-shadow: 0 4px #0097a7;
-    transform: translateY(0);
+  background-color: #00bcd4;  /* Azul ativo */
+  color: #fff;
+  box-shadow: 0 4px #0097a7;
+  transform: translateY(0);
 }
 
-/* Nível 3: Lista de Jogos */
+/* ===== Nível 3: Lista de Jogos ===== */
 .game-list-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;                  /* levemente menor para caber no mobile */
+  padding: 0 10px;            /* respiro nas laterais */
 }
 
+/* Card responsivo: nunca ultrapassa a tela */
 .game-card {
-    display: flex;
-    align-items: center;
-    text-decoration: none; /* Remove sublinhado do link */
-    width: 380px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  text-decoration: none;      /* remove sublinhado do link */
+  width: 100%;                /* preenche a largura disponível */
+  max-width: 380px;           /* mantém visual no desktop */
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 3px solid transparent;
+  overflow: hidden;           /* impede conteúdo interno de vazar */
 }
 
 .game-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(255, 111, 145, 0.4); /* Sombra rosa para destacar */
-    border-color: #ff6f91;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 111, 145, 0.4); /* sombra rosa para destacar */
+  border-color: #ff6f91;
 }
 
 /* Espaço da Imagem/Ícone */
 .game-image-box {
-    flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    margin-right: 15px;
-    border-radius: 10px;
-    background-color: #4db6ac; /* Verde água */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 10px;
+  background-color: #4db6ac;  /* Verde água */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .game-placeholder {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: white;
+  font-size: 2rem;            /* ligeiramente menor para caber no mobile */
+  font-weight: bold;
+  color: white;
 }
 
 /* Info do Jogo */
 .game-info {
-    text-align: left;
-    flex-grow: 1;
+  text-align: left;
+  flex-grow: 1;
+  min-width: 0;               /* permite truncamento interno sem estourar o card */
 }
 
 .game-name {
-    margin: 0;
-    color: #e91e63; /* Pink */
-    font-size: 1.5em;
+  margin: 0;
+  color: #e91e63;             /* Pink */
+  font-size: 1.2rem;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .game-description {
-    margin: 5px 0 0 0;
-    color: #555;
-    font-size: 0.9em;
+  margin: 6px 0 0 0;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
 /* Animação para o título */
 @keyframes bounce {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-5px); }
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
 }
 
-/* src/components/HomePage.css - Adicione isso */
+/* ===== Separador de níveis ===== */
 .level-title {
-    color: #00bcd4; 
-    font-size: 1.4em;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 2px dashed #ff9a8d; /* Linha pontilhada para separar níveis */
+  color: #00bcd4;
+  font-size: 1.1rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px dashed #ff9a8d; /* Linha pontilhada para separar níveis */
+}
+
+/* ===== Media Queries ===== */
+
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+  .homepage-container {
+    margin: 24px auto;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .welcome-title { font-size: 1.8rem; }
+  .series-title  { font-size: 1.2rem; }
+
+  .subject-tab {
+    font-size: 0.95rem;
+    padding: 9px 16px;
+  }
+
+  .game-card {
+    max-width: 520px; /* deixa respirar um pouco em tablets */
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .homepage-container {
+    margin: 16px auto;
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .welcome-title { font-size: 1.6rem; }
+  .series-title  { font-size: 1.05rem; }
+
+  .subject-tabs { gap: 8px; }
+
+  .game-card {
+    flex-direction: column;   /* imagem em cima, texto embaixo */
+    text-align: center;
+    max-width: 100%;          /* ocupa toda a largura da tela */
+    padding: 12px;
+  }
+
+  .game-image-box {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .game-placeholder { font-size: 1.8rem; }
+
+  .game-info { text-align: center; }
+
+  .game-name {
+    font-size: 1.05rem;
+    white-space: normal;      /* permite quebrar em 2 linhas se necessário */
+  }
+
+  .game-description {
+    font-size: 0.9rem;
+  }
 }
