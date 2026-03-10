@@ -17,10 +17,12 @@ const gameData = {
     "1º Bimestre": {
       // NÍVEL 3: Provas
       "Prova 1": {
-        "Inglês": [
-//          { id: 100, name: "The Alphabet - O Alfabeto", description: "Aprenda o alfabeto e descubra o som correto da letra, você consegue?", url: "https://alphabet-em.netlify.app/" },
-//          { id: 101, name: "The colors - As cores", description: "Vamos misturar as cores e ver o que acontece?", url: "https://mixing-colors.netlify.app/" },
-//          { id: 102, name: "School objects - Objetos escolares", description: "Quais objetos você usa na escola? Arraste o nome até o objeto e descubra se acertou!", url: "https://drag-school-objects.netlify.app/" },
+        "Inglês": [ 
+          { id: 100, name: "Desafio - Days of the week", description: "Vamos aprender o nome dos dias da semana?", url: "https://etl-days-of-the-week.netlify.app/" },
+          { id: 101, name: "Quebra-cabeça - numbers", description: "Vamos aprender sobre os números de 11 a 20?", url: "https://3-ingles-numbers-11-20.netlify.app//" },
+          { id: 102, name: "Arraste e solte - School objects", description: "Quais objetos você usa na escola? Arraste o nome até o objeto e descubra se acertou!", url: "https://drag-school-objects.netlify.app/" },
+          { id: 103, name: "Jogo da memória - My things in the classroom", description: "Quais itens você tem na sala de aula? ", url: "https://3-ingles-my-things.netlify.app/" },
+          { id: 104, name: "Caça-palavras - Mascots", description: "Vamos conhecer alguns mascotes? ", url: "https://3-ingles-mascots.netlify.app/" }
         ],
         "Matemática": [
 //          { id: 103, name: "Os numerais", description: "Monte o quebra cabeças ligando os numerais e descubra a imagem surpresa!", url: "https://quebra-cabeca-numerais.netlify.app/" },
