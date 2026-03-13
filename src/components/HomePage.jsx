@@ -18,7 +18,7 @@ const gameData = {
       // NÍVEL 3: Provas
       "Prova 1": {
         "Inglês": [ 
-          { id: 100, name: "Desafio - Days of the week", description: "Vamos aprender o nome dos dias da semana?", url: "https://etl-days-of-the-week.netlify.app/" },
+          { id: 100, name: "Desafio - Days of the week", description: "Vamos aprender o nome dos dias da semana ?", url: "https://etl-days-of-the-week.netlify.app/" },
           { id: 101, name: "Quebra-cabeça - numbers", description: "Vamos aprender sobre os números de 11 a 20?", url: "https://3-ingles-numbers-11-20.netlify.app//" },
           { id: 102, name: "Arraste e solte - School objects", description: "Quais objetos você usa na escola? Arraste o nome até o objeto e descubra se acertou!", url: "https://drag-school-objects.netlify.app/" },
           { id: 103, name: "Jogo da memória - My things in the classroom", description: "Quais itens você tem na sala de aula? ", url: "https://3-ingles-my-things.netlify.app/" },
