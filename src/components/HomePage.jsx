@@ -25,14 +25,15 @@ const gameData = {
           { id: 104, name: "Caça-palavras - Mascots", description: "Vamos conhecer alguns mascotes? ", url: "https://3-ingles-mascots.netlify.app/" }
         ],
         "Matemática": [
-//          { id: 103, name: "Os numerais", description: "Monte o quebra cabeças ligando os numerais e descubra a imagem surpresa!", url: "https://quebra-cabeca-numerais.netlify.app/" },
-//          { id: 104, name: "Comparando quantidades", description: "Desafio dos símbolos, escolha o correto. Qual número é maior? Qual é menor? E qual é igual?", url: "https://comparando-quantidades.netlify.app/" },
-//          { id: 105, name: "Ordem crescente e decrescente", description: "Arraste os números na ordem que o jogo pede, você consegue?", url: "https://ordenar-sequencias.netlify.app/" },
-//          { id: 106, name: "Sequências numéricas", description: "Descubra qual número está faltando na sequência.", url: "https://sequencias-numericas-em.netlify.app/" },
-//          { id: 107, name: "Adição", description: "Matemática divertida! Vamos aprender a somar? Escolha o resultado correto.", url: "https://quiz-adicao.netlify.app/" }
+          { id: 105, name: "Arraste e solte - Antecessor e sucessor", description: "Qual número vem antes e depois?", url: "https://3-mat-antecessor.netlify.app/" },
+          { id: 106, name: "Arraste e solte - Ordem crescente e decrescente", description: "Arraste os números na ordem que o jogo pede, você consegue?", url: "https://ordenar-sequencias.netlify.app/" },
+          { id: 107, name: "Desafio - Centena, Dezena e Unidade", description: "Vamos praticar a composição e decomposição?", url: "https://centenas-dezenas.netlify.app/" },
+          { id: 108, name: "Quebra-cabeça - Números ordinais", description: "Monte o quebra cabeças ligando os ordinais e descubra a imagem surpresa!", url: "https://3-mat-ordinais.netlify.app/" },
+          { id: 109, name: "Matemática Divertida - Quiz Geral", description: "Vamos testar nossos conhecimentos sobre números naturais, ordinais, pares e ímpares.", url: "https://3-mat-quiz-geral.netlify.app/" },
+          { id: 110, name: "Comparando quantidades", description: "Desafio dos símbolos, escolha o correto. Qual número é maior? Qual é menor? E qual é igual?", url: "https://comparando-quantidades.netlify.app/" }
         ],
         "Português, Ciências, História e Geografia": [
-          { id: 108, name: "Jogos das outras matérias", description: "Acesse aqui os jogos de Português, Ciências, História e Geografia.", url: "https://3-geral-1b-p1.netlify.app/" }
+          { id: 111, name: "Jogos das outras matérias", description: "Acesse aqui os jogos de Português, Ciências, História e Geografia.", url: "https://3-geral-1b-p1.netlify.app/" }
         ]
       },
       "Prova 2": {
